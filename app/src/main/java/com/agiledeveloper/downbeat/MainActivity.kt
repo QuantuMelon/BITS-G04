@@ -17,3 +17,4 @@ class MainActivity : AppCompatActivity() {
 //Brandon
 //Rebecca
 //Rebecca Conflict
+//Resolving a conflict
