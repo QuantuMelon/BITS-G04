@@ -13,5 +13,5 @@ class MainActivity : AppCompatActivity() {
     }
 }
 //Declan
-//Gregory
+/* Gregory */
 //Brandon
