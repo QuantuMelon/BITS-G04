@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">DownBeat</string>
+    <string name="createAccountText">CREATE AN ACCOUNT</string>
+    <string name="loginText">LOGIN</string>
+    <string name="logoDesc">DownBeat Logo</string>
+    <string name="buttonDesc">DownBeat Button</string>
 </resources>
