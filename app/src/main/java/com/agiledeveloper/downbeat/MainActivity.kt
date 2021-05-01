@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageButton
 import android.view.MenuItem;
+import android.widget.TextView
 import android.widget.Toast;
 
 // DownBeat Inception
@@ -14,10 +15,25 @@ class MainActivity : AppCompatActivity() {
 
         //Login button
         val loginButton = findViewById<ImageButton>(R.id.btnLogin)
-        val menuButton = findViewById<ImageButton>(R.id.btnMenu)
+
 
         //Handle button tap
-        loginButton.setOnClickListener { setContentView(R.layout.event_page) }
+        loginButton.setOnClickListener {
+            setContentView(R.layout.event_page)
+            eventsPage()
+        }
+
+    }
+
+    //Moving everything EventsPage related into it's own function for now
+    //Avoids error where setting an OnClickListener for an object not on current page crashes app
+    fun eventsPage(){
+        title = "Events Page"
+        val eventButton = findViewById<TextView>(R.id.btnEvents)
+        //Handle Events Button Click
+        eventButton.setOnClickListener {
+            setContentView(R.layout.activity_main)
+        }
     }
 
 
