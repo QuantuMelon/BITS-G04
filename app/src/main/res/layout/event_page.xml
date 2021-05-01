@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="false"
+    android:background="#F06449">
+
+    <ImageButton
+        android:id="@+id/imageButton5"
+        android:layout_width="138.33dp"
+        android:layout_height="80dp"
+        android:background="#000000"
+        android:paddingLeft="1"
+        android:paddingTop="1"
+        android:paddingRight="1"
+        android:paddingBottom="1"
+        android:scaleX="1"
+        android:scaleY="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/button_events" />
+
+    <ImageButton
+        android:id="@+id/imageButton8"
+        android:layout_width="140.33dp"
+        android:layout_height="80dp"
+        android:background="#000000"
+        android:backgroundTint="#000000"
+        android:paddingLeft="1"
+        android:paddingRight="1"
+        android:paddingBottom="1"
+        android:scaleX="1"
+        android:scaleY="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageButton5"
+        app:srcCompat="@drawable/button_maps" />
+
+    <ImageButton
+        android:id="@+id/imageButton9"
+        android:layout_width="135.33dp"
+        android:layout_height="80dp"
+        android:background="#000000"
+        android:paddingLeft="1dp"
+        android:paddingTop="1dp"
+        android:paddingRight="1dp"
+        android:paddingBottom="1dp"
+        android:scaleX="1"
+        android:scaleY="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/button_messages" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="138dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="701dp"
+        android:background="#66666E"
+        android:fontFamily="@font/abel"
+        android:text="Events"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        app:iconTint="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
