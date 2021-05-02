@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F06449"
-    tools:context=".ui.createevents.CreateEventsFragment">
+    tools:context=".ui.createevent.CreateEventsFragment">
 
     <TextView
         android:id="@+id/text_gallery"

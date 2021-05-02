@@ -12,7 +12,7 @@
         <activity
             android:name="com.agiledeveloper.downbeat.MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/Theme.DownBeat.NoActionBar">
+            android:theme="@style/DownBeat.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
