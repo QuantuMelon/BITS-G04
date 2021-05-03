@@ -23,12 +23,14 @@
 
     <ImageView
         android:id="@+id/navBarBackground"
-        android:layout_width="412dp"
-        android:layout_height="81dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
         android:contentDescription="@string/buttonDesc"
+        android:src="@drawable/navbar"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/navbar" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/btnEvents"
@@ -49,7 +51,6 @@
         android:id="@+id/btnMaps"
         android:layout_width="136dp"
         android:layout_height="80dp"
-        android:layout_marginStart="136dp"
         android:clickable="true"
         android:contentDescription="@string/buttonDesc"
         android:fontFamily="@font/abel"
@@ -59,13 +60,13 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/btnMessages"
-        android:layout_width="136dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="276dp"
+        android:layout_width="133dp"
+        android:layout_height="79dp"
         android:clickable="true"
         android:contentDescription="@string/buttonDesc"
         android:fontFamily="@font/abel"
@@ -75,5 +76,6 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>
