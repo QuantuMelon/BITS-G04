@@ -13,7 +13,8 @@
     <string name="loginText">LOGIN</string>
     <string name="logoDesc">DownBeat Logo</string>
     <string name="buttonDesc">DownBeat Button</string>
-    <string name="eventsText">Events</string>
+    <string name="eventsText">Upcoming Events</string>
+    <string name="eventsTextShort">Events</string>
     <string name="mapsText">Maps</string>
     <string name="messagesText">Messages</string>
     <string name="createEventsText">Create Event</string>

@@ -15,8 +15,12 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
+            android:textAlignment="center"
             android:background="?attr/colorPrimary"
-            app:popupTheme="@style/Theme.DownBeat.PopupOverlay" />
+            app:popupTheme="@style/Theme.DownBeat.PopupOverlay"
+            app:titleTextColor="@color/black"
+            app:titleTextAppearance="@style/TitleBarText"
+            />
 
     </com.google.android.material.appbar.AppBarLayout>
 

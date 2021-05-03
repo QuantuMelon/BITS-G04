@@ -40,7 +40,7 @@
         android:contentDescription="@string/buttonDesc"
         android:fontFamily="@font/abel"
         android:gravity="center"
-        android:text="@string/eventsText"
+        android:text="@string/eventsTextShort"
         android:textColor="#FFFFFF"
         android:textSize="18sp"
         android:textStyle="bold"
