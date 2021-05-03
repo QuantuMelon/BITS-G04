@@ -12,7 +12,7 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
-        <!--Make Hamburger Blue-->
+        <!--Custom themes for toolbar (Blue Hamburger and Abel Title Text)-->
         <item name="drawerArrowStyle">@style/DrawerIcon</item>
         <item name="titleTextAppearance">@style/TitleBarText</item>
     </style>

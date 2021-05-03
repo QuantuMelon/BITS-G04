@@ -9,4 +9,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="downBeat_orange">#F06449</color>
     <color name="downBeat_blue">#5BC3EB</color>
+    <color name="downBeat_white">#FFFAFF</color>
+    <color name="downBeat_black">#020402</color>
+    <color name="downBeat_grey">#66666E</color>
 </resources>

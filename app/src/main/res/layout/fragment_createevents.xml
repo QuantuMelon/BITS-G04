@@ -7,19 +7,178 @@
     android:background="#F06449"
     tools:context=".ui.createevent.CreateEventsFragment">
 
-    <TextView
-        android:id="@+id/text_gallery"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <Spinner
+        android:id="@+id/typeSpinner"
+        android:layout_width="347dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="33dp"
+        android:background="@color/downBeat_white"
+        android:contentDescription="@string/createEventsObject"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/typeLabel" />
+
+    <ImageView
+        android:id="@+id/createButtonBackground"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="108dp"
+        android:layout_marginEnd="108dp"
+        android:layout_marginBottom="12dp"
+        android:src="@drawable/button"
+        app:layout_constraintBottom_toTopOf="@+id/navBarBackground"
+        android:contentDescription="@string/createEventsObject"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/createEvent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:text="@string/createText"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/createButtonBackground"
+        app:layout_constraintEnd_toEndOf="@+id/createButtonBackground"
+        app:layout_constraintStart_toStartOf="@+id/createButtonBackground"
+        app:layout_constraintTop_toTopOf="@+id/createButtonBackground"
+        android:contentDescription="@string/createEventsObject" />
+
+    <EditText
+        android:id="@+id/titleInput"
+        android:layout_width="347dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="33dp"
+        android:background="@color/downBeat_white"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleLabel"
+        android:contentDescription="@string/createEventsObject"
+        android:autofillHints="" />
+
+    <EditText
+        android:id="@+id/contactInput"
+        android:layout_width="165dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="33dp"
+        android:background="@color/downBeat_white"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/feeInput"
+        app:layout_constraintTop_toBottomOf="@+id/contactLabel"
+        android:contentDescription="@string/createEventsObject"
+        android:autofillHints="" />
+
+    <EditText
+        android:id="@+id/locationInput"
+        android:layout_width="347dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="33dp"
+        android:background="@color/downBeat_white"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/locationLabel"
+        android:contentDescription="@string/createEventsObject"
+        android:autofillHints="" />
+
+    <EditText
+        android:id="@+id/dateInput"
+        android:layout_width="105dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:background="@color/downBeat_white"
+        android:ems="10"
+        android:inputType="date"
+        app:layout_constraintEnd_toStartOf="@+id/startTimeInput"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dateLabel"
+        android:contentDescription="@string/createEventsObject"
+        android:autofillHints="" />
+
+    <EditText
+        android:id="@+id/startTimeInput"
+        android:layout_width="105dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:background="@color/downBeat_white"
+        android:ems="10"
+        android:inputType="time"
+        app:layout_constraintEnd_toStartOf="@+id/endTimeInput"
+        app:layout_constraintStart_toEndOf="@+id/dateInput"
+        app:layout_constraintTop_toBottomOf="@+id/startTimeLabel"
+        android:contentDescription="@string/createEventsObject"
+        android:autofillHints="" />
+
+    <EditText
+        android:id="@+id/endTimeInput"
+        android:layout_width="105dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="33dp"
+        android:background="@color/downBeat_white"
+        android:ems="10"
+        android:inputType="time"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/startTimeInput"
+        app:layout_constraintTop_toBottomOf="@+id/endTimeLabel"
+        android:contentDescription="@string/createEventsObject"
+        android:autofillHints="" />
+
+    <EditText
+        android:id="@+id/feeInput"
+        android:layout_width="165dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:background="@color/downBeat_white"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toStartOf="@+id/contactInput"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/feeLabel"
+        android:contentDescription="@string/createEventsObject"
+        android:autofillHints="" />
+
+    <EditText
+        android:id="@+id/descriptionInput"
+        android:layout_width="345dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="33dp"
+        android:background="@color/downBeat_white"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/descriptionLabel"
+        android:contentDescription="@string/createEventsObject"
+        android:autofillHints="" />
 
     <ImageView
         android:id="@+id/navBarBackground"
@@ -78,5 +237,177 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         />
+
+    <CheckBox
+        android:id="@+id/ownInstrumentsInput"
+        android:layout_width="197dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="3dp"
+        android:text="@string/ownInstruments"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@+id/postToSocialInput"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/descriptionInput"
+        android:contentDescription="@string/createEventsObject" />
+
+    <CheckBox
+        android:id="@+id/postToSocialInput"
+        android:layout_width="151dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="28dp"
+        android:text="@string/postSocial"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ownInstrumentsInput"
+        app:layout_constraintTop_toBottomOf="@+id/descriptionInput"
+        android:contentDescription="@string/createEventsObject" />
+
+    <TextView
+        android:id="@+id/typeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="347dp"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="@font/abel"
+
+        android:text="@string/type"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/typeSpinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/createEventsObject" />
+
+    <TextView
+        android:id="@+id/titleLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="347dp"
+        android:fontFamily="@font/abel"
+        android:text="@string/title"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/typeSpinner"
+        android:contentDescription="@string/createEventsObject" />
+
+    <TextView
+        android:id="@+id/locationLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="320dp"
+        android:fontFamily="@font/abel"
+        android:text="@string/location"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleInput"
+        android:contentDescription="@string/createEventsObject" />
+
+    <TextView
+        android:id="@+id/dateLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="@font/abel"
+        android:text="@string/date"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/dateInput"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/locationInput"
+        android:contentDescription="@string/createEventsObject"/>
+
+    <TextView
+        android:id="@+id/startTimeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="14dp"
+        android:fontFamily="@font/abel"
+        android:text="@string/startTime"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/dateLabel"
+        app:layout_constraintTop_toBottomOf="@+id/locationInput"
+        android:contentDescription="@string/createEventsObject" />
+
+    <TextView
+        android:id="@+id/endTimeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="76dp"
+        android:fontFamily="@font/abel"
+        android:text="@string/endTime"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/startTimeLabel"
+        app:layout_constraintTop_toBottomOf="@+id/locationInput"
+        android:contentDescription="@string/createEventsObject" />
+
+    <TextView
+        android:id="@+id/feeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="@font/abel"
+        android:text="@string/fee"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/feeInput"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dateInput"
+        android:contentDescription="@string/createEventsObject"/>
+
+    <TextView
+        android:id="@+id/contactLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="146dp"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="@font/abel"
+        android:text="@string/contact"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/contactInput"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/startTimeInput"
+        android:contentDescription="@string/createEventsObject" />
+
+    <TextView
+        android:id="@+id/descriptionLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="14dp"
+        android:fontFamily="@font/abel"
+        android:text="@string/description"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/feeInput"
+        android:contentDescription="@string/createEventsObject" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

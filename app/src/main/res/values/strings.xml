@@ -19,4 +19,17 @@
     <string name="messagesText">Messages</string>
     <string name="createEventsText">Create Event</string>
     <string name="logout">Logout</string>
+    <string name="createText">CREATE</string>
+    <string name="type">Type</string>
+    <string name="ownInstruments">Own Instruments Required</string>
+    <string name="postSocial">Post to Social Media</string>
+    <string name="title">Title</string>
+    <string name="location">Location</string>
+    <string name="date">Date</string>
+    <string name="startTime">Start Time</string>
+    <string name="endTime">End Time</string>
+    <string name="fee">Fee</string>
+    <string name="contact">Contact</string>
+    <string name="description">Description</string>
+    <string name="createEventsObject">Create Events Object</string>
 </resources>
