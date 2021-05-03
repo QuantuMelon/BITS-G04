@@ -19,5 +19,9 @@
         <item
             android:id="@+id/nav_createevents"
             android:title="@string/createEventsText" />
+
+        <item
+            android:id="@+id/nav_logout"
+            android:title="@string/logout" />
     </group>
 </menu>
