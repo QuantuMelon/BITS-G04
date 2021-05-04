@@ -26,11 +26,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="108dp"
         android:layout_marginEnd="108dp"
-        android:layout_marginBottom="12dp"
-        android:src="@drawable/button"
-        app:layout_constraintBottom_toTopOf="@+id/navBarBackground"
+        android:layout_marginBottom="24dp"
         android:contentDescription="@string/createEventsObject"
+        android:src="@drawable/button"
+        app:layout_constraintBottom_toTopOf="@+id/mapsicon"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -180,63 +181,83 @@
         android:contentDescription="@string/createEventsObject"
         android:autofillHints="" />
 
-    <ImageView
-        android:id="@+id/navBarBackground"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <Button
+        android:id="@+id/eventsbutton"
+        android:background="#00000"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="16dp"
         android:adjustViewBounds="true"
-        android:contentDescription="@string/buttonDesc"
-        android:src="@drawable/navbar"
+        android:contentDescription="@string/eventIcon"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.051"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/btnEvents"
-        android:layout_width="136dp"
-        android:layout_height="80dp"
-        android:clickable="true"
-        android:contentDescription="@string/buttonDesc"
-        android:fontFamily="@font/abel"
-        android:gravity="center"
-        android:text="@string/eventsTextShort"
-        android:textColor="#FFFFFF"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/btnMaps"
-        android:layout_width="136dp"
-        android:layout_height="80dp"
-        android:clickable="true"
-        android:contentDescription="@string/buttonDesc"
-        android:fontFamily="@font/abel"
-        android:gravity="center"
-        android:text="@string/mapsText"
-        android:textColor="#FFFFFF"
-        android:textSize="18sp"
-        android:textStyle="bold"
+    <ImageView
+        android:id="@+id/eventsicon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="16dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/eventIcon"
+        android:src="@drawable/events_icon"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.051"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/btnMessages"
-        android:layout_width="133dp"
-        android:layout_height="79dp"
-        android:clickable="true"
-        android:contentDescription="@string/buttonDesc"
-        android:fontFamily="@font/abel"
-        android:gravity="center"
-        android:text="@string/messagesText"
-        android:textColor="#FFFFFF"
-        android:textSize="18sp"
-        android:textStyle="bold"
+    <Button
+        android:id="@+id/mapsbutton"
+        android:background="#00000"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="16dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/mapIcon"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        />
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/mapsicon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="16dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/mapIcon"
+        android:src="@drawable/maps_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/messagesbutton"
+        android:background="#00000"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="16dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/messageIcon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.948"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/messagesicon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="16dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/messageIcon"
+        android:src="@drawable/message_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.948"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <CheckBox
         android:id="@+id/ownInstrumentsInput"
