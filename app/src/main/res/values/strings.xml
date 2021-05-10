@@ -20,7 +20,7 @@
     <string name="createEventsText">Create Event</string>
     <string name="logout">Logout</string>
     <string name="createText">CREATE</string>
-    <string name="type">Type</string>
+    <string name="type">Music Type</string>
     <string name="ownInstruments">Own Instruments Required</string>
     <string name="postSocial">Post to Social Media</string>
     <string name="title">Title</string>
@@ -41,4 +41,14 @@
     <string name="log_inTile">Log In</string>
     <string name="remember_passwordTile">Remember Password</string>
     <string name="back_button">Back Button</string>
+    <string-array name="eventTypes">
+        <item>Rock</item>
+        <item>DJ</item>
+        <item>Hip-Hop</item>
+        <item>Metal</item>
+        <item>Indie</item>
+        <item>Blues</item>
+        <item>Progressive</item>
+        <item>Vocalist</item>
+    </string-array>
 </resources>
