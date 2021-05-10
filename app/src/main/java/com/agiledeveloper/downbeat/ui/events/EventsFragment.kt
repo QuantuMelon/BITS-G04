@@ -4,6 +4,8 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
@@ -31,8 +33,8 @@ class EventsFragment : Fragment() {
         //Get the Nav Controller
         val navController = findNavController()
         //Get the "Buttons" - which are actually just Text
-        val eventsButton = root.findViewById<TextView>(R.id.btnEvents)
-        val mapsButton = root.findViewById<TextView>(R.id.btnMaps)
+        val eventsButton = root.findViewById<Button>(R.id.eventsbutton)
+        val mapsButton = root.findViewById<Button>(R.id.mapsbutton)
         //Handle button taps
         eventsButton.setOnClickListener {
             navController.navigate(R.id.nav_events)
