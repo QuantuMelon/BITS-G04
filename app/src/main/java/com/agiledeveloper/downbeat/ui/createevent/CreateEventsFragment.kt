@@ -1,5 +1,6 @@
 package com.agiledeveloper.downbeat.ui.createevent
 
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -45,8 +46,6 @@ class CreateEventsFragment : Fragment() {
         }
 
 
-        val fileName = "events.txt"
-        val eventsFile = File(fileName)
 
         lateinit var createButton: ImageView
         lateinit var typeInput: Spinner
@@ -87,25 +86,31 @@ class CreateEventsFragment : Fragment() {
             descriptionInput = root.findViewById(R.id.descriptionInput)
             instrumentsInput = root.findViewById(R.id.ownInstrumentsInput )
             socialInput = root.findViewById(R.id.postToSocialInput  )
-            createButton.setOnClickListener {
-                type = typeInput.toString()
-                title = titleInput.toString()
-                contact = contactInput.toString()
-                location = locationInput.toString()
-                date = dateInput.toString()
-                startTime = startTimeInput.toString()
-                endTime = endTimeInput.toString()
-                fee = feeInput.toString()
-                description = descriptionInput.toString()
-                instruments = instrumentsInput.toString()
-                postSocial = socialInput.toString()
 
+        createButton.setOnClickListener {
+                //type = typeInput. toString()
+                title = titleInput.getText().toString()
+                contact = contactInput.getText().toString()
+                location = locationInput.getText().toString()
+                date = dateInput.getText().toString()
+                startTime = startTimeInput.getText().toString()
+                endTime = endTimeInput.getText().toString()
+                fee = feeInput.getText().toString()
+                description = descriptionInput.getText().toString()
+                //instruments = instrumentsInput.getText().toString()
+                //postSocial = socialInput.getText().toString()
+                //val event = type + "DIDITWORK," + title + "," + contact + "," + location + "," + date + ","+ startTime + "," + endTime + "," + fee + "," + description + "," + instruments + "," + postSocial
+                val fileName = "events.txt"
+                val eventsFile = File(context?.filesDir, fileName)
+
+                val event = title + "," + contact + "," + location + "," + date + ","+ startTime + "," + endTime + "," + fee + "," + description + "\n"
                 //textView.text = string
 
                 //Print to file
-                eventsFile.printWriter().use { out ->
-                    out.println(type + "," + title + "," + contact + "," + location + "," + date + ","
-                            + startTime + "," + endTime + "," + fee + "," + description + "," + instruments + "," + postSocial)
+                context?.openFileOutput(fileName, Context.MODE_APPEND).use {
+                    if (it != null) {
+                        it.write(event.toByteArray())
+                    }
                 }
             }
 
