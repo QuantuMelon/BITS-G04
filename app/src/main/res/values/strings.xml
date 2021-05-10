@@ -35,4 +35,10 @@
     <string name="eventIcon">Event Icon</string>
     <string name="messageIcon">Message Icon</string>
     <string name="mapIcon">Map Icon</string>
+    <string name="emailTile">Email</string>
+    <string name="passwordTile">Password</string>
+    <string name="forgot_passwordTile">Forgot Password?</string>
+    <string name="log_inTile">Log In</string>
+    <string name="remember_passwordTile">Remember Password</string>
+    <string name="back_button">Back Button</string>
 </resources>

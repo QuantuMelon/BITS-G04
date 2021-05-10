@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="emailTile">Email</string>
+    <string name="passwordTile">Password</string>
+    <string name="forgot_passwordTile">Forgot Password</string>
+    <string name="log_inTile">Log In</string>
+</resources>
