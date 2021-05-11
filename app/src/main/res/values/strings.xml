@@ -46,6 +46,7 @@
     <string name="musicianTile">Musician?</string>
     <string name="venuePromoterTile">Venue Promoter?</string>
     <string name="createAccountTile">Create Account</string>
+    <string name="venue">Venue</string>
     <string-array name="eventTypes">
         <item>Rock</item>
         <item>DJ</item>
@@ -56,4 +57,5 @@
         <item>Progressive</item>
         <item>Vocalist</item>
     </string-array>
+
 </resources>

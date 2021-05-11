@@ -28,4 +28,16 @@
         android:name="com.agiledeveloper.downbeat.ui.createevent.CreateEventsFragment"
         android:label="@string/createEventsText"
         tools:layout="@layout/fragment_maps" />
+
+    <fragment
+        android:id="@+id/nav_createaccount"
+        android:name="com.agiledeveloper.downbeat.ui.createaccount.CreateAccountsFragment"
+        android:label="@string/createAccountTile"
+        tools:layout="@layout/fragment_createaccount" />
+
+    <fragment
+        android:id="@+id/nav_login"
+        android:name="com.agiledeveloper.downbeat.ui.login.login"
+        android:label="@string/createAccountTile"
+        tools:layout="@layout/fragment_login" />
 </navigation>
