@@ -45,7 +45,7 @@ class CreateAccountsFragment : Fragment() {
         mapsButton.setOnClickListener {
             navController.navigate(R.id.nav_maps)
         }
-        eventsButton.setOnClickListener {
+        backbutton2.setOnClickListener {
             navController.navigate(R.id.nav_home)
         }
 /*

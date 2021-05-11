@@ -4,39 +4,36 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.*
+import android.widget.ImageButton
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.agiledeveloper.downbeat.R
-import com.agiledeveloper.downbeat.ui.createevent.CreateAccountsViewModel
-import com.agiledeveloper.downbeat.ui.createevent.LoginViewModel
-import java.io.File
 
-class login : Fragment() {
+class LoginFragment : Fragment() {
 
-    private lateinit var galleryViewModel: LoginViewModel
+    private lateinit var LoginViewModel: LoginViewModel
 
     override fun onCreateView(
             inflater: LayoutInflater,
             container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
-        galleryViewModel =
+        LoginViewModel =
                 ViewModelProvider(this).get(LoginViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_createevents, container, false)
-        //val textView: TextView = root.findViewById(R.id.text_gallery)
-        /*galleryViewModel.text.observe(viewLifecycleOwner, Observer {
+        val root = inflater.inflate(R.layout.fragment_home, container, false)
+        val textView: TextView = root.findViewById(R.id.text_home)
+        LoginViewModel.text.observe(viewLifecycleOwner, {
             textView.text = it
-        })*/
+        })
 
-        //Handle Bottom Navigation Menu
+        //Login button directs to Events page
         //Get the Nav Controller
         val navController = findNavController()
-        //Get the "Buttons" - which are actually just Text
-
+        //Get the loginButton
         val backbutton = root.findViewById<ImageView>(R.id.backbutton)
         //Handle button taps
 
@@ -46,7 +43,4 @@ class login : Fragment() {
 
         return root
     }
-
-
-
 }

@@ -1,4 +1,4 @@
-package com.agiledeveloper.downbeat.ui.createevent
+package com.agiledeveloper.downbeat.ui.login
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

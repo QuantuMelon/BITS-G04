@@ -37,7 +37,7 @@
 
     <fragment
         android:id="@+id/nav_login"
-        android:name="com.agiledeveloper.downbeat.ui.login.login"
-        android:label="@string/createAccountTile"
+        android:name="com.agiledeveloper.downbeat.ui.login.LoginFragment"
+        android:label="@string/log_inTile"
         tools:layout="@layout/fragment_login" />
 </navigation>

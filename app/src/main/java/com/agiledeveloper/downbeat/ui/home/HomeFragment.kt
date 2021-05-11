@@ -25,7 +25,7 @@ class HomeFragment : Fragment() {
                 ViewModelProvider(this).get(HomeViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_home, container, false)
         val textView: TextView = root.findViewById(R.id.text_home)
-        homeViewModel.text.observe(viewLifecycleOwner, Observer {
+        homeViewModel.text.observe(viewLifecycleOwner, {
             textView.text = it
         })
 
@@ -33,12 +33,17 @@ class HomeFragment : Fragment() {
         //Get the Nav Controller
         val navController = findNavController()
         //Get the loginButton
-        val loginButton = root.findViewById<ImageButton>(R.id.btnLogin)
+        val loginButton1 = root.findViewById<ImageButton>(R.id.btnLogin)
+        //Get the createAccount button
+        val createAccountButton = root.findViewById<ImageButton>(R.id.btnCreateAccount)
          //Handle button tap
-         loginButton.setOnClickListener {
+        loginButton1.setOnClickListener {
              navController.navigate(R.id.nav_login)
          }
 
+        createAccountButton.setOnClickListener {
+            navController.navigate(R.id.nav_createaccount)
+        }
         return root
     }
 }
