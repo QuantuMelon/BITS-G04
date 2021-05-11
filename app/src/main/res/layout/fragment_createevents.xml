@@ -26,13 +26,14 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="108dp"
         android:layout_marginEnd="108dp"
-        android:layout_marginBottom="5dp"
         android:contentDescription="@string/createEventsObject"
         android:src="@drawable/button"
         app:layout_constraintBottom_toTopOf="@+id/mapsbutton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ownInstrumentsInput"
+        app:layout_constraintVertical_bias="0.564" />
 
     <TextView
         android:id="@+id/createEvent"
@@ -266,12 +267,12 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="3dp"
+        android:contentDescription="@string/createEventsObject"
         android:text="@string/ownInstruments"
         android:textSize="12sp"
         app:layout_constraintEnd_toStartOf="@+id/postToSocialInput"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/descriptionInput"
-        android:contentDescription="@string/createEventsObject" />
+        app:layout_constraintTop_toBottomOf="@+id/descriptionInput" />
 
     <CheckBox
         android:id="@+id/postToSocialInput"
@@ -313,14 +314,15 @@
         android:layout_marginStart="33dp"
         android:layout_marginTop="14dp"
         android:layout_marginEnd="347dp"
+        android:contentDescription="@string/createEventsObject"
         android:fontFamily="@font/abel"
-        android:text="@string/title"
+        android:text="@string/venue"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.222"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/typeSpinner"
-        android:contentDescription="@string/createEventsObject" />
+        app:layout_constraintTop_toBottomOf="@+id/typeSpinner" />
 
     <TextView
         android:id="@+id/locationLabel"
@@ -328,15 +330,15 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="33dp"
         android:layout_marginTop="14dp"
-        android:layout_marginEnd="320dp"
+        android:layout_marginEnd="330dp"
+        android:contentDescription="@string/createEventsObject"
         android:fontFamily="@font/abel"
         android:text="@string/location"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titleInput"
-        android:contentDescription="@string/createEventsObject" />
+        app:layout_constraintTop_toBottomOf="@+id/titleInput" />
 
     <TextView
         android:id="@+id/dateLabel"

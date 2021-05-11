@@ -116,9 +116,6 @@ class CreateEventsFragment : Fragment() {
 
             val event = type + "," + title + "," + location + "," + date + "," + startTime + "," + endTime + "," + fee + "," + contact + "," + description + "," + instruments + "," + postSocial + "\n"
             val fileName = "events.txt"
-            val eventsFile = File(context?.filesDir, fileName)
-
-            //textView.text = string
 
             //Print to file
             context?.openFileOutput(fileName, Context.MODE_APPEND).use {

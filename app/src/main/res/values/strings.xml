@@ -24,12 +24,13 @@
     <string name="ownInstruments">Own Instruments Required</string>
     <string name="postSocial">Post to Social Media</string>
     <string name="title">Title</string>
-    <string name="location">Location</string>
+    <string name="location">Address</string>
     <string name="date">Date</string>
     <string name="startTime">Start Time</string>
     <string name="endTime">End Time</string>
     <string name="fee">Fee</string>
     <string name="contact">Contact</string>
+    <string name="venue">Venue</string>
     <string name="description">Description</string>
     <string name="createEventsObject">Create Events Object</string>
     <string name="eventIcon">Event Icon</string>
