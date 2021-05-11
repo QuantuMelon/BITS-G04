@@ -1,47 +1,26 @@
 package com.agiledeveloper.downbeat.ui.maps
 
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import android.widget.Button
-import android.widget.ImageView
-import android.widget.TextView
-import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.fragment.findNavController
 import com.agiledeveloper.downbeat.R
+import com.google.android.gms.maps.GoogleMap
+import com.google.android.gms.maps.OnMapReadyCallback
+import androidx.appcompat.app.AppCompatActivity
+import com.google.android.gms.maps.SupportMapFragment
 
-class MapsFragment : Fragment() {
 
-    private lateinit var slideshowViewModel: MapsViewModel
+class MapsFragment : AppCompatActivity() {
 
-    override fun onCreateView(
-            inflater: LayoutInflater,
-            container: ViewGroup?,
-            savedInstanceState: Bundle?
-    ): View? {
-        slideshowViewModel =
-                ViewModelProvider(this).get(MapsViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_maps, container, false)
-        val textView: TextView = root.findViewById(R.id.text_slideshow)
-        slideshowViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-        })
-        //Handle Bottom Navigation Menu
-        //Get the Nav Controller
-        val navController = findNavController()
-        //Get the "Buttons" - which are actually just Text
-        val eventsButton = root.findViewById<Button>(R.id.eventsbutton)
-        val mapsButton = root.findViewById<Button>(R.id.mapsbutton)
-        //Handle button taps
-        eventsButton.setOnClickListener {
-            navController.navigate(R.id.nav_events)
-        }
-        mapsButton.setOnClickListener {
-            navController.navigate(R.id.nav_maps)
-        }
-        return root
+    lateinit var mapFragment: SupportMapFragment
+    lateinit var googleMap: GoogleMap
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+            setContentView(R.layout.fragment_maps)
+
+            mapFragment = supportFragmentManager.findFragmentById(R.id.map) as SupportMapFragment
+            mapFragment.getMapAsync(OnMapReadyCallback {
+                googleMap = it
+            })
     }
 }
+
