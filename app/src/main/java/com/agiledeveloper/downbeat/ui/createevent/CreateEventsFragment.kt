@@ -1,5 +1,6 @@
 package com.agiledeveloper.downbeat.ui.createevent
 
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -45,9 +46,6 @@ class CreateEventsFragment : Fragment() {
         }
 
 
-        val fileName = "events.txt"
-        val eventsFile = File(fileName)
-
         lateinit var createButton: ImageView
         lateinit var typeInput: Spinner
         lateinit var titleInput: EditText
@@ -72,46 +70,63 @@ class CreateEventsFragment : Fragment() {
         lateinit var instruments: String
         lateinit var postSocial: String
 
-            //Maybe create a popup box here?
-            //setContentView(R.layout.activity_main)
-            //title = "KotlinApp"
-            createButton = root.findViewById(R.id.createButtonBackground)
-            typeInput = root.findViewById(R.id.typeSpinner)
-            titleInput = root.findViewById(R.id.titleInput)
-            contactInput = root.findViewById(R.id.contactInput)
-            locationInput = root.findViewById(R.id.locationInput)
-            dateInput = root.findViewById(R.id.dateInput)
-            startTimeInput = root.findViewById(R.id.startTimeInput)
-            endTimeInput = root.findViewById(R.id.endTimeInput)
-            feeInput = root.findViewById(R.id.feeInput)
-            descriptionInput = root.findViewById(R.id.descriptionInput)
-            instrumentsInput = root.findViewById(R.id.ownInstrumentsInput )
-            socialInput = root.findViewById(R.id.postToSocialInput  )
-            createButton.setOnClickListener {
-                type = typeInput.toString()
-                title = titleInput.toString()
-                contact = contactInput.toString()
-                location = locationInput.toString()
-                date = dateInput.toString()
-                startTime = startTimeInput.toString()
-                endTime = endTimeInput.toString()
-                fee = feeInput.toString()
-                description = descriptionInput.toString()
-                instruments = instrumentsInput.toString()
-                postSocial = socialInput.toString()
+        //Maybe create a popup box here?
+        //setContentView(R.layout.activity_main)
+        //title = "KotlinApp"
+        createButton = root.findViewById(R.id.createButtonBackground)
 
-                //textView.text = string
+        titleInput = root.findViewById(R.id.titleInput)
+        contactInput = root.findViewById(R.id.contactInput)
+        locationInput = root.findViewById(R.id.locationInput)
+        dateInput = root.findViewById(R.id.dateInput)
+        startTimeInput = root.findViewById(R.id.startTimeInput)
+        endTimeInput = root.findViewById(R.id.endTimeInput)
+        feeInput = root.findViewById(R.id.feeInput)
+        descriptionInput = root.findViewById(R.id.descriptionInput)
+        instrumentsInput = root.findViewById(R.id.ownInstrumentsInput)
+        socialInput = root.findViewById(R.id.postToSocialInput)
 
-                //Print to file
-                eventsFile.printWriter().use { out ->
-                    out.println(type + "," + title + "," + contact + "," + location + "," + date + ","
-                            + startTime + "," + endTime + "," + fee + "," + description + "," + instruments + "," + postSocial)
+        typeInput = root.findViewById(R.id.typeSpinner)
+        ArrayAdapter.createFromResource(requireContext(), R.array.eventTypes, android.R.layout.simple_spinner_item).also { adapter ->
+            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+            typeInput.adapter = adapter
+
+        }
+
+        createButton.setOnClickListener {
+            type = typeInput.selectedItem.toString()
+            title = titleInput.getText().toString()
+            contact = contactInput.getText().toString()
+            location = locationInput.getText().toString()
+            date = dateInput.getText().toString()
+            startTime = startTimeInput.getText().toString()
+            endTime = endTimeInput.getText().toString()
+            fee = feeInput.getText().toString()
+            description = descriptionInput.getText().toString()
+            if (instrumentsInput.isChecked()) {
+                instruments = "true"
+            } else {
+                instruments = "false"
+            }
+            if (socialInput.isChecked()) {
+                postSocial = "true"
+            } else {
+                postSocial = "false"
+            }
+
+            val event = type + "," + title + "," + location + "," + date + "," + startTime + "," + endTime + "," + fee + "," + contact + "," + description + "," + instruments + "," + postSocial + "\n"
+            val fileName = "events.txt"
+
+            //Print to file
+            context?.openFileOutput(fileName, Context.MODE_APPEND).use {
+                if (it != null) {
+                    it.write(event.toByteArray())
                 }
             }
+        }
 
         return root
     }
-
 
 
 }
