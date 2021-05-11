@@ -34,10 +34,10 @@ class LoginFragment : Fragment() {
         //Get the Nav Controller
         val navController = findNavController()
         //Get the loginButton
-        val backbutton = root.findViewById<ImageView>(R.id.backbutton)
+        val backButton = root.findViewById<ImageView>(R.id.backbutton)
         //Handle button taps
 
-        backbutton.setOnClickListener {
+        backButton.setOnClickListener {
             navController.navigate(R.id.nav_home)
         }
 

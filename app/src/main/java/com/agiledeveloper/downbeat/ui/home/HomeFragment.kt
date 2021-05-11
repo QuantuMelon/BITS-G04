@@ -33,11 +33,11 @@ class HomeFragment : Fragment() {
         //Get the Nav Controller
         val navController = findNavController()
         //Get the loginButton
-        val loginButton1 = root.findViewById<ImageButton>(R.id.btnLogin)
+        val loginButton = root.findViewById<ImageButton>(R.id.btnLogin)
         //Get the createAccount button
         val createAccountButton = root.findViewById<ImageButton>(R.id.btnCreateAccount)
          //Handle button tap
-        loginButton1.setOnClickListener {
+        loginButton.setOnClickListener {
              navController.navigate(R.id.nav_login)
          }
 
