@@ -36,7 +36,7 @@ class HomeFragment : Fragment() {
         val loginButton = root.findViewById<ImageButton>(R.id.btnLogin)
          //Handle button tap
          loginButton.setOnClickListener {
-             navController.navigate(R.id.nav_events)
+             navController.navigate(R.id.fragment_login)
          }
 
         return root

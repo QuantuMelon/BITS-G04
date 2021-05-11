@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F06449"
+    tools:context=".ui.createaccount.CreateAccountsFragment">
+
+    <ImageView
+        android:id="@+id/backbutton2"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/back_button"
+        android:src="@drawable/back_icon_white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/emailInput"
+        android:layout_width="347dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="33dp"
+        android:background="@color/downBeat_white"
+        android:contentDescription="@string/createEventsObject"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailLabel" />
+
+    <ImageView
+        android:id="@+id/createButtonBackground"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="75dp"
+        android:layout_marginEnd="108dp"
+        android:contentDescription="@string/createEventsObject"
+        android:src="@drawable/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phoneNumberInput" />
+
+    <TextView
+        android:id="@+id/createAccount"
+        android:layout_width="115dp"
+        android:layout_height="21dp"
+        android:clickable="true"
+        android:contentDescription="@string/createEventsObject"
+        android:text="@string/createAccountTile"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/createButtonBackground"
+        app:layout_constraintEnd_toEndOf="@+id/createButtonBackground"
+        app:layout_constraintStart_toStartOf="@+id/createButtonBackground"
+        app:layout_constraintTop_toTopOf="@+id/createButtonBackground"
+        app:layout_constraintVertical_bias="0.423" />
+
+    <EditText
+        android:id="@+id/passwordInput"
+        android:layout_width="347dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="33dp"
+        android:autofillHints=""
+        android:background="@color/downBeat_white"
+        android:contentDescription="@string/createEventsObject"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passwordLabel" />
+
+    <EditText
+        android:id="@+id/fullNameInput"
+        android:layout_width="347dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="33dp"
+        android:autofillHints=""
+        android:background="@color/downBeat_white"
+        android:contentDescription="@string/createEventsObject"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameLabel" />
+
+    <EditText
+        android:id="@+id/phoneNumberInput"
+        android:layout_width="347dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="33dp"
+        android:autofillHints=""
+        android:background="@color/downBeat_white"
+        android:contentDescription="@string/createEventsObject"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phoneNumberLabel" />
+
+    <CheckBox
+        android:id="@+id/musicianCheck"
+        android:layout_width="97dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="23dp"
+        android:contentDescription="@string/createEventsObject"
+        android:text="@string/musicianTile"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phoneNumberInput" />
+
+    <CheckBox
+        android:id="@+id/venueCheck"
+        android:layout_width="129dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="60dp"
+        android:contentDescription="@string/createEventsObject"
+        android:text="@string/venuePromoterTile"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phoneNumberInput" />
+
+    <TextView
+        android:id="@+id/emailLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:contentDescription="@string/createEventsObject"
+        android:fontFamily="@font/abel"
+        android:text="@string/emailTile"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/backbutton2"
+        tools:layout_editor_absoluteX="32dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/passwordLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="347dp"
+        android:contentDescription="@string/createEventsObject"
+        android:fontFamily="@font/abel"
+        android:text="@string/passwordTile"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailInput" />
+
+    <TextView
+        android:id="@+id/nameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="12dp"
+        android:contentDescription="@string/createEventsObject"
+        android:fontFamily="@font/abel"
+        android:text="@string/nameTile"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passwordInput" />
+
+    <TextView
+        android:id="@+id/phoneNumberLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="5dp"
+        android:contentDescription="@string/createEventsObject"
+        android:fontFamily="@font/abel"
+        android:text="@string/phoneNumberTile"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/phoneNumberInput"
+        app:layout_constraintTop_toBottomOf="@+id/fullNameInput"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="31dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

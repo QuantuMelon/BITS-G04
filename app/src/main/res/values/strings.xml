@@ -41,4 +41,9 @@
     <string name="log_inTile">Log In</string>
     <string name="remember_passwordTile">Remember Password</string>
     <string name="back_button">Back Button</string>
+    <string name="nameTile">Full Name</string>
+    <string name="phoneNumberTile">Phone Number</string>
+    <string name="musicianTile">Musician?</string>
+    <string name="venuePromoterTile">Venue Promoter?</string>
+    <string name="createAccountTile">Create Account</string>
 </resources>
