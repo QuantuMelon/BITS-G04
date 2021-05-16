@@ -25,11 +25,8 @@ class CreateAccountsFragment : Fragment() {
     ): View? {
         galleryViewModel =
                 ViewModelProvider(this).get(CreateAccountsViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_createevents, container, false)
-        //val textView: TextView = root.findViewById(R.id.text_gallery)
-        /*galleryViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-        })*/
+        val root = inflater.inflate(R.layout.fragment_createaccount, container, false)
+
 
         //Handle Bottom Navigation Menu
         //Get the Nav Controller

@@ -10,7 +10,7 @@ android {
     buildToolsVersion "30.0.3"
 
     defaultConfig {
-        applicationId "com.agiledeveloper.navigatiodrawtest"
+        applicationId "com.agiledeveloper.downbeat"
         minSdkVersion 28
         targetSdkVersion 30
         versionCode 1

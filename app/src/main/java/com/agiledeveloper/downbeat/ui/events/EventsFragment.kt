@@ -10,33 +10,23 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.agiledeveloper.downbeat.R
-import java.io.BufferedReader;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.lang.NullPointerException
+import java.io.*
 
 class EventsFragment : Fragment() {
 
-    private lateinit var galleryViewModel: EventsViewModel
+    private lateinit var eventsViewModel: EventsViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        galleryViewModel =
+        eventsViewModel =
             ViewModelProvider(this).get(EventsViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_events, container, false)
-        //val textView: TextView = root.findViewById(R.id.text_gallery)
-        //galleryViewModel.text.observe(viewLifecycleOwner, Observer {
-        //   textView.text = it
-        // })
-        //Handle Bottom Navigation Menu
         //Get the Nav Controller
         val navController = findNavController()
-        //Get the "Buttons" - which are actually just Text
+        //Get the bottom nav "Buttons"
         val eventsButton = root.findViewById<Button>(R.id.eventsbutton)
         val mapsButton = root.findViewById<Button>(R.id.mapsbutton)
         //Handle button taps
@@ -49,8 +39,6 @@ class EventsFragment : Fragment() {
 
         //Read Events from file
         readFile(root)
-
-
 
         return root
     }
@@ -67,15 +55,27 @@ class EventsFragment : Fragment() {
             val bufferedReader = BufferedReader(inputStreamReader)
             val stringBuffer = StringBuffer()
             var lines: String = ""
-            lines = bufferedReader.readLine()
-            /*while (lines != null) {
-                val tokens = lines.split(",")
-                venue = tokens[1]
-                date = tokens[3]
-                if (bufferedReader.readLine())
-                lines = bufferedReader.readLine()
+
+/*            val N = 10 // total number of textviews to add
+            val myTextViews = arrayOfNulls<TextView>(N) // create an empty array;
+
+
+            for (i in 0 until N) {
+                // create a new textview
+                val rowTextView = TextView(this)
+
+                // set some properties of rowTextView or something
+                rowTextView.text = "This is row #$i"
+
+                // add the textview to the linearlayout
+                myLinearLayout.addView(rowTextView)
+
+                // save a reference to the textview for later
+                myTextViews[i] = rowTextView
             }*/
+            //var count = -1;
             bufferedReader.forEachLine {
+                //count++
                 lines = bufferedReader.readLine()
                 val tokens = lines.split(",")
                 venue = tokens[1]
@@ -83,10 +83,15 @@ class EventsFragment : Fragment() {
             }
             eventTitle1.setText(venue).toString()
             eventDate1.setText(date).toString()
+
         } catch (e: FileNotFoundException) {
             e.printStackTrace()
         } catch (e: IOException) {
             e.printStackTrace()
+        } finally {
+            //fileInputStream
+            //inputStreamReader
+            //bufferedReader.close
         }
     }
 }

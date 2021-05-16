@@ -26,10 +26,6 @@ class CreateEventsFragment : Fragment() {
         galleryViewModel =
                 ViewModelProvider(this).get(CreateEventsViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_createevents, container, false)
-        //val textView: TextView = root.findViewById(R.id.text_gallery)
-        /*galleryViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-        })*/
 
         //Handle Bottom Navigation Menu
         //Get the Nav Controller
