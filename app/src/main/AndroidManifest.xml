@@ -50,7 +50,8 @@ string in this file.
 -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyAeY_B3M2z_5S_6cOJiIUf9gy4lF6OnsuQ"/>
+            android:value="AIzaSyBGvD1VtD7ec5WCNJMFX5BJKkytmhmK7SE"/>
+        <!--Rebecca's Key-->
 
 <!--        <meta-data-->
 <!--            android:name="com.google.android.gms.version"-->
