@@ -13,6 +13,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.agiledeveloper.downbeat.R
 import java.io.File
+import android.widget.Toast
 
 class CreateEventsFragment : Fragment() {
 
@@ -119,6 +120,17 @@ class CreateEventsFragment : Fragment() {
                     it.write(event.toByteArray())
                 }
             }
+
+            titleInput.setText("")
+            contactInput.setText("")
+            locationInput.setText("")
+            dateInput.setText("")
+            startTimeInput.setText("")
+            endTimeInput.setText("")
+            feeInput.setText("")
+            descriptionInput.setText("")
+            val toast = Toast.makeText(root.context, "Event Created.", Toast.LENGTH_SHORT)
+            toast.show()
         }
 
         return root

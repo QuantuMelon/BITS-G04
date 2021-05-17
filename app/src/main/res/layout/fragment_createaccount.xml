@@ -203,5 +203,83 @@
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="31dp" />
 
+    <Button
+        android:id="@+id/eventsbutton"
+        android:background="?android:attr/selectableItemBackground"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="16dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/eventIcon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.051"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/eventsicon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="16dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/eventIcon"
+        android:src="@drawable/events_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.051"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/mapsbutton"
+        android:background="?android:attr/selectableItemBackground"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="16dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/mapIcon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/mapsicon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="16dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/mapIcon"
+        android:src="@drawable/maps_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/messagesbutton"
+        android:background="?android:attr/selectableItemBackground"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="16dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/messageIcon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.948"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/messagesicon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="16dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/messageIcon"
+        android:src="@drawable/message_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.948"
+        app:layout_constraintStart_toStartOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
